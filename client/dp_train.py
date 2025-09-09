@@ -78,7 +78,7 @@ def train_dp(model, train_loader, optimizer, device):
         )
 
     # It's good practice to detach the privacy engine when done
-    privacy_engine.detach()
+    
     return model
 
 # Example of how this function might be called from client/main.py

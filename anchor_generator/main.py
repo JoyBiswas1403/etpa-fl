@@ -95,7 +95,7 @@ def train_dp_vae(vae_model, data_loader, device):
         epsilon = privacy_engine.get_epsilon(DP_TARGET_DELTA)
         print(f"Epoch [{epoch+1}/{EPOCHS}], Loss: {loss.item()/len(images):.4f}, ε: {epsilon:.2f}")
 
-    privacy_engine.detach()
+    
     return vae_model
 
 def generate_anchors(vae_model, num_samples, device):
