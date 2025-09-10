@@ -107,11 +107,4 @@ Contributions are welcome! Please open issues and pull requests to suggest impro
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
----
 
-## 🙌 Acknowledgements
-
-- Inspired by research in privacy-preserving federated learning.
-- Special thanks to contributors and the open-source community.
-
----
