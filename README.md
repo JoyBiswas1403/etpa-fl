@@ -12,12 +12,13 @@ The aim is to achieve the right balance between **accuracy, privacy, and efficie
 
 ## ⚙️ Installation
 
-###1. Clone Repository
+### 1. Clone Repository
 ```bash
 git clone https://github.com/JoyBiswas1403/etpa-fl.git
 cd etpa-fl
 
-###2. Setup Virtual Environment
+
+###2.** Setup Virtual Environment**
 bash
 Copy code
 python -m venv .venv
