@@ -37,6 +37,7 @@ bash
 Copy code
 pip install --upgrade pip
 pip install -r requirements.txt
+
 📂 Repository Structure
 bash
 Copy code
@@ -62,9 +63,8 @@ Server is running and waiting for clients...
 Client 1 is running...
 Client 2 is running...
 ...
+
 📊 Results & Goals
 Balance between accuracy, privacy, and efficiency
-
 Evaluate under non-IID data distributions
-
 Compare against standard DP techniques
