@@ -17,30 +17,29 @@ The aim is to achieve the right balance between **accuracy, privacy, and efficie
 git clone https://github.com/JoyBiswas1403/etpa-fl.git
 cd etpa-fl
 
-
-###2.** Setup Virtual Environment**
-bash
-Copy code
+### 2. Setup Virtual Environment
+```bash
 python -m venv .venv
 Windows (PowerShell):
 
-bash
-Copy code
+```bash
 .venv\Scripts\Activate.ps1
 Linux/Mac:
 
-bash
-Copy code
+```bash
 source .venv/bin/activate
-3. Install Dependencies
-bash
-Copy code
+
+### 3. Install Dependencies
+```bash
+
 pip install --upgrade pip
 pip install -r requirements.txt
 
+--- 
+
 📂 Repository Structure
-bash
-Copy code
+
+```bash
 etpa-fl/
 ├── client/          # Client-side training logic
 ├── server/          # Server aggregation and coordination
@@ -49,22 +48,31 @@ etpa-fl/
 ├── requirements.txt # Python dependencies
 ├── README.md        # Project documentation
 └── main.py          # Entry point
-🚀 Usage
-Run Full Federated Learning (Server + Clients)
-bash
-Copy code
+
+--- 
+
+##🚀 Usage
+
+###Run Full Federated Learning (Server + Clients)
+```bash
+
 python main.py
 You should see:
 
-arduino
-Copy code
+```arduino
+
 Starting Event-Triggered Privacy Anchors (ETPA) Simulation
 Server is running and waiting for clients...
 Client 1 is running...
 Client 2 is running...
 ...
 
-📊 Results & Goals
-Balance between accuracy, privacy, and efficiency
-Evaluate under non-IID data distributions
-Compare against standard DP techniques
+---
+
+###📊 Results & Goals
+
+- Balance between accuracy, privacy, and efficiency
+- Evaluate under non-IID data distributions
+- Compare against standard DP techniques
+
+---
