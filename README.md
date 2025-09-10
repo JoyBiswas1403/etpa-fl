@@ -54,6 +54,14 @@ pip install -r requirements.txt
 
 ---
 
+## Troubleshooting Installation
+
+*   **Error on Windows about running scripts:** You may need to set the execution policy first:
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    ```
+*   **Opacus/CUDA errors:** If you don't have a GPU, ensure you are installing the CPU-only version of PyTorch first. Check the [Opacus installation guide](https://opacus.ai/) for the correct `pip install` command.
+
 ## 📂 Repository Structure
 
 ```
