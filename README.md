@@ -2,6 +2,7 @@
 
 ## 📌 Project Overview
 This project implements **Federated Learning with Differential Privacy (DP)** using two key ideas:
+
 - **Privacy Anchors** → Synthetic samples generated via DP-VAE / DP-GAN  
 - **Event-Triggered Adaptation** → Dynamically adjusting DP noise and regenerating anchors when client models diverge  
 
@@ -15,77 +16,53 @@ The aim is to achieve the right balance between **accuracy, privacy, and efficie
 ```bash
 git clone https://github.com/JoyBiswas1403/etpa-fl.git
 cd etpa-fl
-
---- 
-
-### 2. Setup Virtual Environment
-```bash
+2. Setup Virtual Environment
+bash
+Copy code
 python -m venv .venv
+Windows (PowerShell):
 
-- Windows (PowerShell):
-```bash
+bash
+Copy code
 .venv\Scripts\Activate.ps1
+Linux/Mac:
 
-- Linus/Mac:
-```bash
+bash
+Copy code
 source .venv/bin/activate
-
----
-
-### 3. Install Dependencies 
-```bash
+3. Install Dependencies
+bash
+Copy code
 pip install --upgrade pip
 pip install -r requirements.txt
-
----
-
 📂 Repository Structure
-```bash
-
+bash
+Copy code
 etpa-fl/
-│── client/            # Client-side training logic
-│── server/            # Server aggregation and coordination
-│── utils/             # Data partitioning, evaluation, helper functions
-│── anchors/           # Privacy Anchor generation (DP-VAE, DP-GAN)
-│── requirements.txt   # Python dependencies
-│── README.md          # Project documentation
-│── main.py            # Entry point
-
----
-
-##🚀Usage
-
-### Run Full Federated Learning (Server + Clients)
-```bash
+├── client/          # Client-side training logic
+├── server/          # Server aggregation and coordination
+├── utils/           # Data partitioning, evaluation, helper functions
+├── anchors/         # Privacy Anchor generation (DP-VAE, DP-GAN)
+├── requirements.txt # Python dependencies
+├── README.md        # Project documentation
+└── main.py          # Entry point
+🚀 Usage
+Run Full Federated Learning (Server + Clients)
+bash
+Copy code
 python main.py
+You should see:
 
---- 
-###Run Client Individually
-```bash
-python -m client.train_client
- 
- ---
+arduino
+Copy code
+Starting Event-Triggered Privacy Anchors (ETPA) Simulation
+Server is running and waiting for clients...
+Client 1 is running...
+Client 2 is running...
+...
+📊 Results & Goals
+Balance between accuracy, privacy, and efficiency
 
-###Run Server Individually
-```bash
-python -m server.aggregate_server
+Evaluate under non-IID data distributions
 
----
-
-## 📊 Features
-
-Federated Learning powered by Flower (FLWR)
-
-Differential Privacy with Opacus (DP-SGD)
-
-Synthetic Privacy Anchors using DP-VAE / DP-GAN
-
-Event-triggered adaptation to improve robustness under non-IID data
-
-Benchmarks on FEMNIST, Shakespeare, StackOverflow datasets
-
----
-
-##📜 License
-
-This project is licensed under the MIT License. See the LICENSE
+Compare against standard DP techniques
