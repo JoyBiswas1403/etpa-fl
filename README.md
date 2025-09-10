@@ -16,6 +16,8 @@ The aim is to achieve the right balance between **accuracy, privacy, and efficie
 git clone https://github.com/JoyBiswas1403/etpa-fl.git
 cd etpa-fl
 
+--- 
+
 ### 2. Setup Virtual Environment
 ```bash
 python -m venv .venv
@@ -28,10 +30,14 @@ python -m venv .venv
 ```bash
 source .venv/bin/activate
 
+---
+
 ### 3. Install Dependencies 
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
+
+---
 
 📂 Repository Structure
 ```bash
@@ -45,19 +51,26 @@ etpa-fl/
 │── README.md          # Project documentation
 │── main.py            # Entry point
 
+---
+
 ##🚀Usage
 
 ### Run Full Federated Learning (Server + Clients)
 ```bash
 python main.py
 
+--- 
 ###Run Client Individually
 ```bash
 python -m client.train_client
+ 
+ ---
 
 ###Run Server Individually
 ```bash
 python -m server.aggregate_server
+
+---
 
 ## 📊 Features
 
@@ -70,6 +83,8 @@ Synthetic Privacy Anchors using DP-VAE / DP-GAN
 Event-triggered adaptation to improve robustness under non-IID data
 
 Benchmarks on FEMNIST, Shakespeare, StackOverflow datasets
+
+---
 
 ##📜 License
 
