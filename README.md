@@ -1,12 +1,13 @@
 # Event-Triggered Privacy Anchors (ETPA) for Federated Learning
 
 ## 📌 Project Overview
-This project implements **Federated Learning with Differential Privacy (DP)** using two key ideas:
 
-- **Privacy Anchors** → Synthetic samples generated via DP-VAE / DP-GAN  
-- **Event-Triggered Adaptation** → Dynamically adjusting DP noise and regenerating anchors when client models diverge  
+This project implements **Federated Learning with Differential Privacy (DP)** using two key concepts:
 
-The aim is to achieve the right balance between **accuracy, privacy, and efficiency** in non-IID federated learning setups.
+- **Privacy Anchors**: Synthetic samples generated via DP-VAE / DP-GAN  
+- **Event-Triggered Adaptation**: Dynamically adjusts DP noise and regenerates anchors when client models diverge  
+
+The aim is to balance **accuracy, privacy, and efficiency** in non-IID federated learning setups.
 
 ---
 
