@@ -87,10 +87,21 @@ def load_anchors(path):
         else:
             data = obj
             labels = None
-        if isinstance(data, torch.Tensor):
-            x = data.cpu()
+        # Debug: print type and shape of data before tensor conversion
+        print("[DEBUG] type(data):", type(data))
+        if hasattr(data, 'shape'):
+            print("[DEBUG] data.shape:", getattr(data, 'shape', None))
         else:
-            x = torch.tensor(data)
+            print("[DEBUG] data has no 'shape' attribute")
+        try:
+            if isinstance(data, torch.Tensor):
+                x = data.cpu()
+            else:
+                x = torch.tensor(data)
+        except Exception as e:
+            print("[ERROR] Failed to convert data to torch tensor:", e)
+            print("[ERROR] Data content (truncated):", str(data)[:500])
+            raise ValueError("Anchor file format is not compatible. Please check the anchor generation script and ensure it saves a tensor or numpy array under a common key like 'anchors', 'data', 'images', or 'x'.") from e
         if labels is not None:
             labels = torch.tensor(labels)
         return x, labels
@@ -122,12 +133,18 @@ def show_image_grid(images, ncols=6, title=None):
     for i in range(n):
         ax = plt.subplot(nrows, ncols, i+1)
         img = images[i]
+        # If flat vector, reshape to 28x28 for MNIST-like images
+        if img.ndim == 1 and img.shape[0] == 28*28:
+            img = img.reshape(28, 28)
         # handle (C,H,W) or (H,W)
         if img.ndim == 3:
             img = np.transpose(img, (1,2,0))
-            if img.shape[2] == 1:
-                img = img[:,:,0]
-        plt.imshow(img, cmap='gray' if img.ndim==2 or img.shape[2]==1 else None)
+            if img.shape[-1] == 1:
+                img = img[..., 0]
+        if img.ndim == 2:
+            plt.imshow(img, cmap='gray')
+        else:
+            plt.imshow(img)
         plt.axis('off')
     if title:
         plt.suptitle(title)
