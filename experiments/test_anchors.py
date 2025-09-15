@@ -152,8 +152,10 @@ def show_image_grid(images, ncols=6, title=None):
     plt.show()
 
 def simple_train_eval(anchors_x, anchors_y, test_loader, epochs=3, device="cpu"):
-    # anchors_x: tensor shape (N,C,H,W) or (N,H,W)
-    if anchors_x.ndim == 3:
+    # anchors_x: tensor shape (N,C,H,W), (N,H,W), or (N,784)
+    if anchors_x.ndim == 2 and anchors_x.shape[1] == 28*28:
+        anchors_x = anchors_x.view(-1, 1, 28, 28)
+    elif anchors_x.ndim == 3:
         anchors_x = anchors_x.unsqueeze(1)  # (N,1,H,W)
     in_ch = anchors_x.shape[1]
     num_classes = int(anchors_y.max().item()) + 1
