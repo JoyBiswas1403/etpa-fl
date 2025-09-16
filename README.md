@@ -1,62 +1,45 @@
 # Event-Triggered Privacy Anchors (ETPA) for Federated Learning
 
 ## 📌 Project Overview
+This project implements **Federated Learning with Differential Privacy (DP)** using two key ideas:
 
-This project implements **Federated Learning with Differential Privacy (DP)** using two key concepts:
+- **Privacy Anchors** → Synthetic samples generated via DP-VAE / DP-GAN  
+- **Event-Triggered Adaptation** → Dynamically adjusting DP noise and regenerating anchors when client models diverge  
 
-- **Privacy Anchors**: Synthetic samples generated via DP-VAE / DP-GAN  
-- **Event-Triggered Adaptation**: Dynamically adjusts DP noise and regenerates anchors when client models diverge  
-
-The aim is to balance **accuracy, privacy, and efficiency** in non-IID federated learning setups.
+The aim is to achieve the right balance between **accuracy, privacy, and efficiency** in non-IID federated learning setups.
 
 ---
 
 ## ⚙️ Installation
 
-### 1. Clone the Repository
-
+### 1. Clone Repository
 ```bash
 git clone https://github.com/JoyBiswas1403/etpa-fl.git
 cd etpa-fl
-```
 
-### 2. Set Up Virtual Environment
-
-Create a virtual environment:
-
+### 2. Setup Virtual Environment
 ```bash
 python -m venv .venv
-```
-
-Activate the environment:
-
-- **Windows (PowerShell):**
-    ```bash
-    .venv\Scripts\Activate.ps1
-    ```
-- **Windows (Command Prompt):**
-    ```cmd
-    .venv\Scripts\activate.bat
-    ```
-- **Linux/Mac:**
-    ```bash
-    source .venv/bin/activate
-    ```
-
-### 3. Install Dependencies
-
-Upgrade pip and install required packages:
+Windows (PowerShell):
 
 ```bash
+.venv\Scripts\Activate.ps1
+Linux/Mac:
+
+```bash
+source .venv/bin/activate
+
+### 3. Install Dependencies
+```bash
+
 pip install --upgrade pip
 pip install -r requirements.txt
-```
 
----
+--- 
 
-## 📂 Repository Structure
+📂 Repository Structure
 
-```
+```bash
 etpa-fl/
 ├── client/          # Client-side training logic
 ├── server/          # Server aggregation and coordination
@@ -65,46 +48,31 @@ etpa-fl/
 ├── requirements.txt # Python dependencies
 ├── README.md        # Project documentation
 └── main.py          # Entry point
-```
 
----
+--- 
 
-## 🚀 Usage
+##🚀 Usage
 
-To run the full Federated Learning simulation (server + clients):
-
+###Run Full Federated Learning (Server + Clients)
 ```bash
+
 python main.py
-```
+You should see:
 
-You should see output like:
+```arduino
 
-```text
 Starting Event-Triggered Privacy Anchors (ETPA) Simulation
 Server is running and waiting for clients...
 Client 1 is running...
 Client 2 is running...
 ...
-```
 
 ---
 
-## 📊 Results & Goals
+###📊 Results & Goals
 
-- Achieve a balance between accuracy, privacy, and efficiency
-- Evaluate performance under non-IID data distributions
-- Compare results against standard DP techniques
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please open issues and pull requests to suggest improvements or report bugs.
+- Balance between accuracy, privacy, and efficiency
+- Evaluate under non-IID data distributions
+- Compare against standard DP techniques
 
 ---
-
-## 📝 License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
-
