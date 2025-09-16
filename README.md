@@ -35,6 +35,11 @@ source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 
+### 4. Generate Privacy Anchors
+Before running experiments, generate anchors:
+```bash
+python anchors/generate_anchors.py --output anchors/test_anchors.pt
+
 --- 
 
 📂 Repository Structure
