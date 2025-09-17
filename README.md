@@ -23,8 +23,6 @@ The aim is to balance **accuracy, privacy, and efficiency** in non-IID federated
 ```bash
 git clone https://github.com/JoyBiswas1403/etpa-fl.git
 cd etpa-fl
-
-=======
 ```
 
 ### 2. Setup Virtual Environment
@@ -32,9 +30,10 @@ cd etpa-fl
 python -m venv .venv
 
 Windows (PowerShell):
-=======
+
 # Windows (PowerShell):
 .venv\Scripts\Activate.ps1
+
 # Linux/Mac:
 source .venv/bin/activate
 ```
@@ -45,20 +44,22 @@ source .venv/bin/activate
 
 pip install --upgrade pip
 pip install -r requirements.txt
+```
 
 ```bash
 .venv\Scripts\Activate.ps1
+
 Linux/Mac:
 
 ```bash
 source .venv/bin/activate
-
+```
 
 ### 4. Generate Privacy Anchors
 Before running experiments, generate anchors:
 ```bash
 python anchors/generate_anchors.py --output anchors/test_anchors.pt
-
+```
 --- 
 
 ## 📂 Repository Structure
@@ -72,25 +73,10 @@ etpa-fl/
 ├── requirements.txt # Python dependencies
 ├── README.md        # Project documentation
 └── main.py          # Entry point
-
+```
 --- 
 
-##🚀 Usage
 
-### Run Full Federated Learning (Server + Clients)
-```bash
-
-python main.py
-You should see:
-
-```arduino
-
-Starting Event-Triggered Privacy Anchors (ETPA) Simulation
-Server is running and waiting for clients...
-Client 1 is running...
-Client 2 is running...
-...
-=======
 ## 🚀 Usage
 
 ### 1. Generate Anchors (if not already present)
