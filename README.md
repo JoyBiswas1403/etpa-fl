@@ -1,5 +1,4 @@
-pip install --upgrade pip
-pip install -r requirements.txt
+
 # Event-Triggered Privacy Anchors (ETPA) for Federated Learning
 
 ## 📌 Project Overview
@@ -24,17 +23,14 @@ The aim is to balance **accuracy, privacy, and efficiency** in non-IID federated
 ```bash
 git clone https://github.com/JoyBiswas1403/etpa-fl.git
 cd etpa-fl
-<<<<<<< HEAD
+
 =======
 ```
 
 ### 2. Setup Virtual Environment
->>>>>>> 53322fef5a934a379f580fc7bd3ed60a5a8d40f6
-
-### 2. Setup Virtual Environment
 ```bash
 python -m venv .venv
-<<<<<<< HEAD
+
 Windows (PowerShell):
 =======
 # Windows (PowerShell):
@@ -44,7 +40,11 @@ source .venv/bin/activate
 ```
 
 ### 3. Install Dependencies
->>>>>>> 53322fef5a934a379f580fc7bd3ed60a5a8d40f6
+
+```bash
+
+pip install --upgrade pip
+pip install -r requirements.txt
 
 ```bash
 .venv\Scripts\Activate.ps1
@@ -53,11 +53,6 @@ Linux/Mac:
 ```bash
 source .venv/bin/activate
 
-### 3. Install Dependencies
-```bash
-
-pip install --upgrade pip
-pip install -r requirements.txt
 
 ### 4. Generate Privacy Anchors
 Before running experiments, generate anchors:
@@ -66,7 +61,7 @@ python anchors/generate_anchors.py --output anchors/test_anchors.pt
 
 --- 
 
-📂 Repository Structure
+## 📂 Repository Structure
 
 ```bash
 etpa-fl/
@@ -80,10 +75,9 @@ etpa-fl/
 
 --- 
 
-<<<<<<< HEAD
 ##🚀 Usage
 
-###Run Full Federated Learning (Server + Clients)
+### Run Full Federated Learning (Server + Clients)
 ```bash
 
 python main.py
@@ -108,7 +102,7 @@ python etpa-fl/anchors/generate_anchors.py --output anchors/test_anchors.pt
 ```bash
 python etpa-fl/server/server.py
 ```
->>>>>>> 53322fef5a934a379f580fc7bd3ed60a5a8d40f6
+
 
 ### 3. Run Clients (in separate terminals)
 ```bash
@@ -138,11 +132,7 @@ python etpa-fl/main.py
 
 ---
 
-<<<<<<< HEAD
-###📊 Results & Goals
-=======
 ## 📊 Results & Goals
->>>>>>> 53322fef5a934a379f580fc7bd3ed60a5a8d40f6
 
 - Balance between accuracy, privacy, and efficiency
 - Evaluate under non-IID data distributions
