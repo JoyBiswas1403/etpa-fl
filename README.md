@@ -8,14 +8,13 @@ This project implements **Federated Learning with Differential Privacy (DP)** us
 - **Privacy Anchors** → Synthetic samples generated via DP-VAE / DP-GAN  
 - **Event-Triggered Adaptation** → Dynamically adjusting DP noise and regenerating anchors when client models diverge  
 
-<<<<<<< HEAD
+
 The aim is to achieve the right balance between **accuracy, privacy, and efficiency** in non-IID federated learning setups.
-=======
+
 - **Privacy Anchors**: Synthetic samples generated via DP-VAE / DP-GAN
 - **Event-Triggered Adaptation**: Dynamically adjusts DP noise and regenerates anchors when client models diverge
 
 The aim is to balance **accuracy, privacy, and efficiency** in non-IID federated learning setups.
->>>>>>> 53322fef5a934a379f580fc7bd3ed60a5a8d40f6
 
 ---
 
